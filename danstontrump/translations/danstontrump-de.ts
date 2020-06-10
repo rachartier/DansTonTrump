@@ -9,29 +9,43 @@
     </message>
 </context>
 <context>
-    <name>FirstPage</name>
+    <name>DetailQuotesPage</name>
     <message>
-        <source>Show Page 2</source>
-        <translation>Zur Seite 2</translation>
-    </message>
-    <message>
-        <source>UI Template</source>
-        <translation>UI-Vorlage</translation>
-    </message>
-    <message>
-        <source>Hello Sailors</source>
-        <translation>Hallo Matrosen</translation>
+        <source>Last Quotes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
-    <name>SecondPage</name>
+    <name>MainPage</name>
     <message>
-        <source>Nested Page</source>
-        <translation>Unterseite</translation>
+        <source>DansTonTrump</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Item</source>
-        <translation>Element</translation>
+        <source>Last Quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Random Quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Personalized Quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PersonalizedQuotesPage</name>
+    <message>
+        <source>Personalized Quote</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RandomQuotePage</name>
+    <message>
+        <source>Random Quote</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

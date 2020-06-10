@@ -19,8 +19,10 @@ SOURCES += src/danstontrump.cpp \
 
 DISTFILES += qml/danstontrump.qml \
     qml/cover/CoverPage.qml \
-    qml/pages/FirstPage.qml \
-    qml/pages/SecondPage.qml \
+    qml/pages/DetailQuotesPage.qml \
+    qml/pages/MainPage.qml \
+    qml/pages/PersonalizedQuotesPage.qml \
+    qml/pages/RandomQuotePage.qml \
     rpm/danstontrump.changes.in \
     rpm/danstontrump.changes.run.in \
     rpm/danstontrump.spec \
