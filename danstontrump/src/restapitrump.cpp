@@ -20,5 +20,5 @@ void RestAPITrump::requestFinished(QNetworkReply *reply) {
     QJsonDocument jsonResponse = QJsonDocument::fromJson(answer.toUtf8());
     QJsonObject jsonObject = jsonResponse.object();
 
-    std::list<Quote*> q = QuoteBuilder::createQuotesListFromJson(jsonObject);
+    QList<Quote*> q = QuoteBuilder::createQuotesListFromJson(jsonObject);
 }
