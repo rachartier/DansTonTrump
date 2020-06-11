@@ -15,7 +15,7 @@ public:
     QuoteBuilder();
 
     static Quote* createQuoteFromJson(QJsonObject& jsonObject);
-    static std::list<Quote*> createQuotesListFromJson(QJsonObject& jsonObject);
+    static QList<Quote*> createQuotesListFromJson(QJsonObject& jsonObject);
 };
 
 #endif // QUOTEBUILDER_H

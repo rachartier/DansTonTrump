@@ -21,10 +21,10 @@ QList<Quote*> QuoteBuilder::createQuotesListFromJson(QJsonObject& jsonObject) {
     if(jsonObject.contains("messages")) {
         QJsonObject messages = jsonObject["messages"].toObject();
 
-        if(!messages.contains("non_personalized")) return null;
-
-        for(const auto& nonPersonalizedMessage : messages["non_personalized"].toArray()) {
-            quotes.push_back(new Quote(nonPersonalizedMessage.toString()));
+        if(messages.contains("non_personalized")) {
+            for(const auto& nonPersonalizedMessage : messages["non_personalized"].toArray()) {
+                quotes.push_back(new Quote(nonPersonalizedMessage.toString()));
+            }
         }
     }
 
