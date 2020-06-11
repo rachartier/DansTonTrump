@@ -9,17 +9,25 @@ Page {
 
     SilicaListView {
         id: listView
-        model: 20
         anchors.fill: parent
         header: PageHeader {
-            title: qsTr("Nested Page")
+            title: qsTr("Last Quotes")
         }
-        delegate: BackgroundItem {
+
+        model: ListModel{
+            ListElement { content: "quote 1" }
+            ListElement { content: "quote 2" }
+            ListElement { content: "quote 3" }
+            ListElement { content: "quote 4" }
+        }
+
+        delegate: ListItem {
             id: delegate
 
-            Label {
+            TextArea {
                 x: Theme.horizontalPageMargin
-                text: qsTr("Item") + " " + index
+                readOnly: true
+                text: content
                 anchors.verticalCenter: parent.verticalCenter
                 color: delegate.highlighted ? Theme.highlightColor : Theme.primaryColor
             }
