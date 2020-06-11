@@ -6,6 +6,8 @@ class QuoteManager
 {
 public:
     QuoteManager();
+
+    //Quote getRandomQuote();
 };
 
 #endif // QUOTEMANAGER_H

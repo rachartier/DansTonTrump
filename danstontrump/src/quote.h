@@ -7,11 +7,18 @@ class Quote : public QObject
 {
     Q_OBJECT
 public:
-    explicit Quote();
+    explicit Quote(QString message);
+
+    static Quote createFromJson(QJsonObject &jsonObject);
+
+    QString getMessage();
 
 signals:
 
 public slots:
+
+private:
+    QString m_message;
 };
 
 #endif // QUOTE_H

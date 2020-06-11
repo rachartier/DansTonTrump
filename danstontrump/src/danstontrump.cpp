@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
     // To display the view, call "show()" (will show fullscreen on device).
 
     RestAPITrump r;
-    r.get("https://api.whatdoestrumpthink.com/api/v1/quotes/random");
+    r.get("https://api.whatdoestrumpthink.com/api/v1/quotes/");
 
     return SailfishApp::main(argc, argv);
 }
