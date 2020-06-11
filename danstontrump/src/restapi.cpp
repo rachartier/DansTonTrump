@@ -1,25 +1,22 @@
 #include "restapi.h"
-#include <QtNetwork>
-#include <QNetworkRequest>
-#include <QUrl>
 
-QJsonObject RestAPI::GET(QString url)
+RestAPI::RestAPI()
 {
-    QNetworkAccessManager networkAccessManager;
-    QNetworkRequest request;
+    m_networkAccessManager = new QNetworkAccessManager();
+    QObject::connect(m_networkAccessManager, SIGNAL(finished(QNetworkReply *)),
+                     this, SLOT(requestFinished(QNetworkReply *)));
+}
 
+RestAPI::~RestAPI()
+{
+    QObject::disconnect(m_networkAccessManager, SIGNAL(finished(QNetworkReply *)),
+                        this, SLOT(requestFinished(QNetworkReply *)));
+}
+
+void RestAPI::get(QString url)
+{
+    QNetworkRequest request;
     request.setUrl(QUrl(url));
 
-    QNetworkReply *reply = networkAccessManager.get(request);
-
-    QTime timeout= QTime::currentTime().addSecs(5);
-
-    while(QTime::currentTime() < timeout && !reply->isFinished()){
-        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
-    }
-
-    qDebug() << reply->readAll();
-
-    QJsonDocument document = QJsonDocument::fromJson(reply->readAll());
-    return document.object();
+    m_networkAccessManager->get(request);
 }

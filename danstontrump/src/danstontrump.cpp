@@ -4,7 +4,7 @@
 
 #include <sailfishapp.h>
 #include <QJsonObject>
-#include "restapi.h"
+#include "restapitrump.h"
 
 int main(int argc, char *argv[])
 {
@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
     //
     // To display the view, call "show()" (will show fullscreen on device).
 
+    RestAPITrump r;
+    r.get("https://api.whatdoestrumpthink.com/api/v1/quotes/random");
 
-    qDebug() << QJsonDocument(RestAPI::GET("https://api.whatdoestrumpthink.com/api/v1/quotes/random")).toJson(QJsonDocument::Compact);
     return SailfishApp::main(argc, argv);
 }

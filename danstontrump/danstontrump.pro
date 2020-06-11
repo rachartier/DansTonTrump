@@ -16,7 +16,8 @@ CONFIG += sailfishapp
 
 SOURCES += src/danstontrump.cpp \
     src/quote.cpp \
-    src/restapi.cpp
+    src/restapi.cpp \
+    src/restapitrump.cpp
 
 DISTFILES += qml/danstontrump.qml \
     qml/cover/CoverPage.qml \
@@ -45,4 +46,5 @@ TRANSLATIONS += translations/danstontrump-de.ts
 
 HEADERS += \
     src/quote.h \
-    src/restapi.h
+    src/restapi.h \
+    src/restapitrump.h
