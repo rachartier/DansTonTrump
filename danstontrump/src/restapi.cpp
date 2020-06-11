@@ -14,7 +14,7 @@ QJsonObject RestAPI::GET(QString url)
 
     QTime timeout= QTime::currentTime().addSecs(5);
 
-    while( QTime::currentTime() < timeout && !reply->isFinished()){
+    while(QTime::currentTime() < timeout && !reply->isFinished()){
         QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
     }
 

@@ -15,6 +15,7 @@ TARGET = danstontrump
 CONFIG += sailfishapp
 
 SOURCES += src/danstontrump.cpp \
+    src/quote.cpp \
     src/restapi.cpp
 
 DISTFILES += qml/danstontrump.qml \
@@ -41,4 +42,5 @@ CONFIG += sailfishapp_i18n
 TRANSLATIONS += translations/danstontrump-de.ts
 
 HEADERS += \
+    src/quote.h \
     src/restapi.h

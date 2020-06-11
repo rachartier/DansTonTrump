@@ -20,6 +20,5 @@ int main(int argc, char *argv[])
 
 
     qDebug() << QJsonDocument(RestAPI::GET("https://api.whatdoestrumpthink.com/api/v1/quotes/random")).toJson(QJsonDocument::Compact);
-
     return SailfishApp::main(argc, argv);
 }
