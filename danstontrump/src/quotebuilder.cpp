@@ -14,19 +14,22 @@ Quote* QuoteBuilder::createQuoteFromJson(QJsonObject& jsonObject) {
     return new Quote(jsonObject.value("message").toString());
 }
 
-QList<Quote*> QuoteBuilder::createQuotesListFromJson(QJsonObject& jsonObject) {
-    QList<Quote*> quotes;
+QVariantList QuoteBuilder::createQuotesListFromJson(QJsonObject& jsonObject) {
+    QVariantList quotes;
 
 
     if(jsonObject.contains("messages")) {
         QJsonObject messages = jsonObject["messages"].toObject();
 
         if(messages.contains("non_personalized")) {
-            for(const auto& nonPersonalizedMessage : messages["non_personalized"].toArray()) {
-                quotes.push_back(new Quote(nonPersonalizedMessage.toString()));
+            for(const auto nonPersonalizedMessage : messages["non_personalized"].toArray()) {
+                quotes.push_back(QVariant::fromValue(new Quote(nonPersonalizedMessage.toString())));
+
             }
         }
     }
+
+    qDebug() << QVariant::fromValue(quotes).data();
 
     return quotes;
 }

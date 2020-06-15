@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import com.iut 1.0
 
 Page {
     id: page
@@ -14,13 +15,16 @@ Page {
             title: qsTr("Last Quotes")
         }
 
+        /*
         model: ListModel{
             ListElement { content: "quote 1" }
             ListElement { content: "quote 2" }
             ListElement { content: "quote 3" }
             ListElement { content: "quote 4" }
         }
+        */
 
+        /*
         delegate: ListItem {
             id: delegate
 
@@ -34,5 +38,30 @@ Page {
             onClicked: console.log("Clicked " + index)
         }
         VerticalScrollDecorator {}
+        */
+
+        Button {
+            text: "hello"
+            onClicked: {
+                console.log(QuoteManager.getQuotes())
+            }
+        }
+
+
+        Column{
+            y: 50
+            x: 50
+
+            Repeater {
+                model: QuoteManager.getQuotes()
+
+                Text {
+                    height: 20
+                    text: modelData["message"]
+                    color: "#FFFFFF"
+                }
+
+            }
+        }
     }
 }
