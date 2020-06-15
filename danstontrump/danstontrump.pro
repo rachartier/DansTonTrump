@@ -17,6 +17,7 @@ CONFIG += sailfishapp
 SOURCES += src/danstontrump.cpp \
     src/quote.cpp \
     src/quotebuilder.cpp \
+    src/quotelist.cpp \
     src/quotemanager.cpp \
     src/restapi.cpp \
     src/restapitrump.cpp
@@ -49,6 +50,7 @@ TRANSLATIONS += translations/danstontrump-de.ts
 HEADERS += \
     src/quote.h \
     src/quotebuilder.h \
+    src/quotelist.h \
     src/quotemanager.h \
     src/restapi.h \
     src/restapitrump.h

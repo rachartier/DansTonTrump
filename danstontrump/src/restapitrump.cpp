@@ -21,4 +21,8 @@ void RestAPITrump::requestFinished(QNetworkReply *reply) {
     QJsonObject jsonObject = jsonResponse.object();
 
     QList<Quote*> q = QuoteBuilder::createQuotesListFromJson(jsonObject);
+
+    foreach (Quote* quote, q) {
+        qDebug() << quote->getMessage();
+    }
 }

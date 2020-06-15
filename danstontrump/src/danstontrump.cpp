@@ -21,5 +21,9 @@ int main(int argc, char *argv[])
     RestAPITrump r;
     r.get("https://api.whatdoestrumpthink.com/api/v1/quotes/");
 
-    return SailfishApp::main(argc, argv);
+
+    QGuiApplication * app = SailfishApp::application(argc, argv);
+    QQuickView * view     = SailfishApp::createView();
+
+    return app->exec();
 }

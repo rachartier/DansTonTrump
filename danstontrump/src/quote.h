@@ -6,6 +6,8 @@
 class Quote : public QObject
 {
     Q_OBJECT
+    Q_PROPERTY(QString m_message READ getMessage NOTIFY messageReceived)
+
 public:
     explicit Quote(QString message);
 
@@ -14,6 +16,7 @@ public:
     QString getMessage();
 
 signals:
+    void messageReceived();
 
 public slots:
 
