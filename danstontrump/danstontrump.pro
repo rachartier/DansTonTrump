@@ -19,8 +19,7 @@ SOURCES += src/danstontrump.cpp \
     src/quotebuilder.cpp \
     src/quotelist.cpp \
     src/quotemanager.cpp \
-    src/restapi.cpp \
-    src/restapitrump.cpp
+    src/restapi.cpp
 
 DISTFILES += qml/danstontrump.qml \
     qml/cover/CoverPage.qml \
@@ -52,5 +51,4 @@ HEADERS += \
     src/quotebuilder.h \
     src/quotelist.h \
     src/quotemanager.h \
-    src/restapi.h \
-    src/restapitrump.h
+    src/restapi.h

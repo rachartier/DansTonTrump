@@ -6,19 +6,17 @@
 class Quote : public QObject
 {
     Q_OBJECT
-    Q_PROPERTY(QString m_message READ getMessage NOTIFY messageReceived)
+    Q_PROPERTY(QString message READ getMessage WRITE setMessage NOTIFY messageChanged)
 
 public:
     explicit Quote(QString message);
-
-    static Quote createFromJson(QJsonObject &jsonObject);
+    Quote() {}
 
     QString getMessage();
+    void setMessage(QString newMessage);
 
 signals:
-    void messageReceived();
-
-public slots:
+    void messageChanged();
 
 private:
     QString m_message;

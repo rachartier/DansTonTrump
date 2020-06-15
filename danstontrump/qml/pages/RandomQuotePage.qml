@@ -1,10 +1,16 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import com.iut 1.0
 
 Page {
     id: page
 
     allowedOrientations: Orientation.All
+
+    Quote {
+        id: quote
+        message: QuoteManager.getRandomQuote().message
+    }
 
     Label {
         id: label
@@ -16,20 +22,21 @@ Page {
     }
 
     TextArea {
-        id: quote
+        id: quoteMessage
         anchors.top: label.bottom
         anchors.verticalCenter: parent.verticalCenter
         wrapMode: TextEdit.Wrap
         width: 600
         readOnly: true
-        text: "Quote random"
+        text: quote.message
     }
 
     Button {
        id: randomGen
-       anchors.top: quote.bottom
+       anchors.top: quoteMessage.bottom
        text: "Random"
-       onClicked: console.log("clicked!")
+       onClicked: {
+           quote.message = QuoteManager.getRandomQuote().message
+       }
     }
-
 }

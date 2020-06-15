@@ -3,20 +3,29 @@
 RestAPI::RestAPI()
 {
     m_networkAccessManager = new QNetworkAccessManager();
-    QObject::connect(m_networkAccessManager, SIGNAL(finished(QNetworkReply *)),
-                     this, SLOT(requestFinished(QNetworkReply *)));
 }
 
 RestAPI::~RestAPI()
 {
-    QObject::disconnect(m_networkAccessManager, SIGNAL(finished(QNetworkReply *)),
-                        this, SLOT(requestFinished(QNetworkReply *)));
 }
 
-void RestAPI::get(QString url)
+QJsonObject RestAPI::get(QString url)
 {
     QNetworkRequest request;
     request.setUrl(QUrl(url));
 
-    m_networkAccessManager->get(request);
+    QNetworkReply *reply = m_networkAccessManager->get(request);
+
+    QEventLoop loop;
+    connect(reply, SIGNAL(finished()), &loop, SLOT(quit()));
+    connect(reply, SIGNAL(error(QNetworkReply::NetworkError)), &loop, SLOT(quit()));
+    loop.exec();
+
+    QByteArray bytes = reply->readAll();
+    QString result(bytes);
+
+    QJsonDocument jsonResponse = QJsonDocument::fromJson(result.toUtf8());
+    QJsonObject jsonObject = jsonResponse.object();
+
+    return jsonObject;
 }

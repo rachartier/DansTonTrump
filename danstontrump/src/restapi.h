@@ -6,6 +6,7 @@
 #include <QtNetwork>
 #include <QNetworkRequest>
 #include <QUrl>
+#include <functional>
 
 class RestAPI : public QObject
 {
@@ -15,10 +16,7 @@ public:
     RestAPI();
     ~RestAPI();
 
-    void get(QString url);
-
-public slots:
-    virtual void requestFinished(QNetworkReply *reply) = 0;
+    QJsonObject get(QString url);
 
 private:
     QNetworkAccessManager *m_networkAccessManager;

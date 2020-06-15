@@ -1,10 +1,15 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import com.iut 1.0
 
 Page {
     id: page
 
     allowedOrientations: Orientation.All
+
+    Quote {
+        id: quote
+    }
 
     Label {
         id: label
@@ -26,15 +31,22 @@ Page {
     }
 
     TextArea {
+        id: textArea
         anchors.top: inputPerso.bottom
         anchors.verticalCenter: parent.verticalCenter
         wrapMode: TextEdit.Wrap
         width: 600
         readOnly: true
-        text: inputPerso.text
+        text: quote.message
     }
 
 
-
+    Button {
+        anchors.top: textArea.bottom
+        text: "Get custom quote"
+        onClicked: {
+            quote.message = QuoteManager.getPersonalizedQuote(inputPerso.text).message
+        }
+    }
 
 }
