@@ -22,7 +22,10 @@ SOURCES += src/danstontrump.cpp \
     src/restapi.cpp
 
 DISTFILES += qml/danstontrump.qml \
+    qml/items/MenuDisplay.qml \
+    qml/items/QuoteDisplay.qml \
     qml/cover/CoverPage.qml \
+    qml/items/Title.qml \
     qml/pages/DetailQuotesPage.qml \
     qml/pages/MainPage.qml \
     qml/pages/PersonalizedQuotesPage.qml \
@@ -33,6 +36,8 @@ DISTFILES += qml/danstontrump.qml \
     rpm/danstontrump.yaml \
     translations/*.ts \
     danstontrump.desktop
+
+
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 

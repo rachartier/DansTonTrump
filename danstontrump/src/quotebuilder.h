@@ -15,7 +15,7 @@ public:
     QuoteBuilder();
 
     static Quote* createQuoteFromJson(QJsonObject& jsonObject);
-    static QVariantList createQuotesListFromJson(QJsonObject& jsonObject);
+    static QList<QObject *> createQuotesListFromJson(QJsonObject& jsonObject);
 };
 
 #endif // QUOTEBUILDER_H

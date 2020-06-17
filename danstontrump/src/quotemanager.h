@@ -13,7 +13,7 @@ public:
 
     Q_INVOKABLE Quote* getRandomQuote();
     Q_INVOKABLE Quote* getPersonalizedQuote(QString name);
-    Q_INVOKABLE QVariantList getQuotes();
+    Q_INVOKABLE QList<QObject *> getQuotes();
 
 private:
     RestAPI m_api;

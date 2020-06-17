@@ -11,7 +11,7 @@
 <context>
     <name>DetailQuotesPage</name>
     <message>
-        <source>Last Quotes</source>
+        <source>All Quotes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -21,6 +21,21 @@
         <source>DansTonTrump</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Last Quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Random Quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Personalized Quotes</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>MenuDisplay</name>
     <message>
         <source>Last Quotes</source>
         <translation type="unfinished"></translation>
