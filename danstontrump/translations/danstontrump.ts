@@ -9,13 +9,6 @@
     </message>
 </context>
 <context>
-    <name>DetailQuotesPage</name>
-    <message>
-        <source>All Quotes</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
     <name>MainPage</name>
     <message>
         <source>DansTonTrump</source>

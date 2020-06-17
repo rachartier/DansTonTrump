@@ -19,6 +19,7 @@ Quote* QuoteManager::getPersonalizedQuote(QString name) {
 }
 
 QList<QObject *> QuoteManager::getQuotes() {
+
     QJsonObject result = m_api.get("https://api.whatdoestrumpthink.com/api/v1/quotes");
 
     return QuoteBuilder::createQuotesListFromJson(result);

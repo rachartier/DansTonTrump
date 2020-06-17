@@ -9,25 +9,20 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
-    Column {
-        Title {
-            text: qsTr("All Quotes")
-        }
 
-        SilicaListView {
-            anchors.fill: parent
+    SilicaListView {
+        anchors.fill: parent
 
-            model: QuoteManager.getQuotes()
+        model: QuoteManager.getQuotes()
 
-            delegate: QuoteDisplay {
-                width: parent.width
-                height: Theme.itemSizeSmall
+        delegate: QuoteDisplay {
+            width: parent.width
+            height: Theme.itemSizeSmall
 
-                text: message
+            text: modelData.message
 
-                Component.onCompleted : {
-                    console.log(message)
-                }
+            Component.onCompleted : {
+                console.log(modelData.message)
             }
         }
     }
