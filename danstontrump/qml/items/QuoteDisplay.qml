@@ -10,6 +10,11 @@ ListItem {
             width: parent.width
             wrapMode: Text.WordWrap
             color: Theme.lightPrimaryColor
-            font.pixelSize: Theme.fontSizeSmall        
+            font.pixelSize: Theme.fontSizeSmall
+            anchors {
+                        left: parent.left
+                        right: parent.right
+                        margins: Theme.paddingLarge
+                    }
     }
 }

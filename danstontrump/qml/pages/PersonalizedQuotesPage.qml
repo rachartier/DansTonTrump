@@ -12,33 +12,53 @@ Page {
         id: quote
     }
 
-    Column {
-        Title {
-            text: qsTr("Personalized Quote")
-        }
+    SilicaItem{
+        anchors.fill: parent
+        Column {
+            spacing: Theme.paddingLarge
+            width: parent.width
 
-        TextField {
-            id: inputPerso
+            PageHeader {
+                title: "Personalized Quote"
+                id: header
+            }
 
-            width: 600
-            anchors.top: label.bottom
-            focus: true
-            placeholderText: "Enter a name"
-            label: "Name"
-        }
+            TextField {
+                id: inputPerso
 
-        QuoteDisplay {
-            text: quote.message
-        }
+                width: parent.width
+                focus: true
+                placeholderText: "Enter a name"
+                label: "Name"
+
+                anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: Theme.paddingLarge
+                        }
+            }
+
+            QuoteDisplay {
+                width: parent.width
+                text: quote.message
+            }
 
 
-        Button {
-            anchors.top: textArea.bottom
-            text: "Get custom quote"
-            onClicked: {
-                quote.message = QuoteManager.getPersonalizedQuote(inputPerso.text).message
+            Button {
+                anchors.top: textArea.bottom
+                text: "Get custom quote"
+                onClicked: {
+                    quote.message = QuoteManager.getPersonalizedQuote(inputPerso.text).message
+                }
+                anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: Theme.paddingLarge
+                        }
             }
         }
     }
+
+
 
 }

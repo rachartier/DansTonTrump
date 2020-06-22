@@ -12,7 +12,6 @@ Page {
 
     SilicaListView {
         anchors.fill: parent
-
         model: QuoteManager.getQuotes()
 
         delegate: QuoteDisplay {
@@ -20,10 +19,6 @@ Page {
             height: Theme.itemSizeSmall
 
             text: modelData.message
-
-            Component.onCompleted : {
-                console.log(modelData.message)
-            }
         }
     }
 }

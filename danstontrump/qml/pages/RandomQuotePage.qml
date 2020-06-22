@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import QtQuick.Layouts 1.0
 import Sailfish.Silica 1.0
 import com.iut 1.0
 import "../items"
@@ -7,33 +8,50 @@ Page {
     id: page
     allowedOrientations: Orientation.All
 
-
-    Quote {
-        id: quote
-        message: QuoteManager.getRandomQuote().message
-    }
-
-    Column {
+    SilicaItem{
         anchors.fill: parent
-        spacing: 50
 
-        Title {
-            text: qsTr("Random Quote")
-        }
-
-        QuoteDisplay {
+        Column{
+            spacing: Theme.paddingLarge
             width: parent.width
 
-            id: quoteMessage
-            text: quote.message
-        }
+            PageHeader{
+                title: "Random Quote"
+                id: header
+            }
 
-        Button {
-           id: randomGen
-           text: "Random"
-           onClicked: {
-               quote.message = QuoteManager.getRandomQuote().message
-           }
+            Quote {
+                id: quote
+                message: QuoteManager.getRandomQuote().message
+            }
+
+
+            QuoteDisplay {
+                width: parent.width
+
+                id: quoteMessage
+                text: quote.message
+                anchors {
+                            left: parent.left
+                            right: parent.right
+                            margins: Theme.paddingLarge
+                        }
+            }
+
+            Button {
+               id: randomGen
+               text: "Random"
+               onClicked: {
+                   quote.message = QuoteManager.getRandomQuote().message
+               }
+               anchors {
+                   left: parent.left
+                   right: parent.right
+                   margins: Theme.paddingLarge
+               }
+            }
         }
     }
+
+
 }

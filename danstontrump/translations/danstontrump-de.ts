@@ -42,18 +42,4 @@
         <translation type="unfinished"></translation>
     </message>
 </context>
-<context>
-    <name>PersonalizedQuotesPage</name>
-    <message>
-        <source>Personalized Quote</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>RandomQuotePage</name>
-    <message>
-        <source>Random Quote</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
 </TS>
