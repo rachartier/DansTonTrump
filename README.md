@@ -46,8 +46,8 @@ le lien à l'API.
 ### Raphaël CHARTIER
 
 - 50%
-- Tout le C++, et un peu de QML aussi (pour la liaison)
-- QML: La page *Detail*
+- Tout le C++, et un peu de QML (pour la liaison et amélioration de la vue)
+- QML: La page *Detail*, QuoteDisplay et Title
 - Auto-Évaluation: 
 
 
