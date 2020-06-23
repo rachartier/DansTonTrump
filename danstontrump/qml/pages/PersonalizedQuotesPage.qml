@@ -13,6 +13,8 @@ Page {
     }
 
     Column {
+        spacing: 50
+
         Title {
             text: qsTr("Personalized Quote")
         }

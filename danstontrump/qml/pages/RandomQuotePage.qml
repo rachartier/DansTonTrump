@@ -22,8 +22,6 @@ Page {
         }
 
         QuoteDisplay {
-            width: parent.width
-
             id: quoteMessage
             text: quote.message
         }
