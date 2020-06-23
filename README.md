@@ -48,7 +48,7 @@ le lien à l'API.
 - 50%
 - Tout le C++, et un peu de QML (pour la liaison et amélioration de la vue)
 - QML: La page *Detail*, QuoteDisplay et Title
-- Auto-Évaluation: 
+- Auto-Évaluation: 15 aussi, et pourquoi pas 20 moyennant quelques corruptions
 
 
 [Vue de l'application](doc/DTTmockupPDF.pdf)
