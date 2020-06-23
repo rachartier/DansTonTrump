@@ -30,4 +30,9 @@ Page {
             }
         }
     }
+
+    Image {
+        anchors.centerIn: parent
+        source: "../img/trump.jpg"
+    }
 }

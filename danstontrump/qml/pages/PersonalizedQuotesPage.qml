@@ -12,7 +12,7 @@ Page {
         id: quote
     }
 
-    SilicaItem{
+    SilicaItem {
         anchors.fill: parent
         Column {
             spacing: Theme.paddingLarge

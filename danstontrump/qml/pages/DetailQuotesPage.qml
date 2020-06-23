@@ -12,12 +12,12 @@ Page {
 
     SilicaListView {
         anchors.fill: parent
+
+        spacing: 20
+
         model: QuoteManager.getQuotes()
 
         delegate: QuoteDisplay {
-            width: parent.width
-            height: Theme.itemSizeSmall
-
             text: modelData.message
         }
     }
