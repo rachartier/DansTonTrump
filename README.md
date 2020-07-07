@@ -34,22 +34,5 @@ le lien à l'API.
 
 * RAS (pour l'instant)
 
-
-## Auteurs
-
-### Clément ALLAVENA
-
-- 50%
-- QML: toutes les pages, et un peu de C++ aussi (pour la liaison)
-- Auto-Évaluation: je nous mettrais 15.
-
-### Raphaël CHARTIER
-
-- 50%
-- Tout le C++, et un peu de QML (pour la liaison et amélioration de la vue)
-- QML: La page *Detail*, QuoteDisplay et Title
-- Auto-Évaluation: 15 aussi, et pourquoi pas 20 moyennant quelques corruptions
-
-
 [Vue de l'application](doc/DTTmockupPDF.pdf)
 
