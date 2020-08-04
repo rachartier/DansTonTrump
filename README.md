@@ -1,4 +1,4 @@
---
+Projet réalisé dans le cadre du module QT de la Licence Pro Informatique
 
 # DansTonTrump
 
